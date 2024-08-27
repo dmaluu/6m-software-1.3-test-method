@@ -1,15 +1,19 @@
-const {addFunc, isDivisibleBy5} = require("./sample");
+const {addFunc, isDivisibleBy5, checkOddEven} = require("./sample");
 
 describe("Test Suite for sample.js functions", ()=>{
     
-    it("should add 3 numbers", ()=>{
+    it("add 3 numbers", ()=>{
         const result = addFunc(1, 3, 4);
-        expect(result).toBe(7);
+        expect(result).toBe(8);
     })
 
-    it("should check divisibility by 5", ()=>{
-        const result = isDivisibleBy5(1283);
-        expect(result).toBe(false);
+    it("divisibility by 5", ()=>{
+        const result = isDivisibleBy5(5);
+        expect(result).toBe(true);
+    })
+
+    it("odd or even", ()=>{
+        const result = checkOddEven(1999);
+        expect(result).toBe("odd");
     })
 })
-//So when the command `npm run test` is run, it calls the test suite and runs the individual tests.
